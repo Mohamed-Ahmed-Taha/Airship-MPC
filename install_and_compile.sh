@@ -4,7 +4,8 @@ echo "This will install all dependencies for Airship MPC simulation and start th
 echo "Press Enter to continue, CTRL+C to abort."
 echo "Warning, this will call sudo to install packages with apt-get."
 echo "If in doubt, read this file and execute the commands one by one with changes as necessary."
-read disclaimer
+# Commened to remove user input 
+# read disclaimer
 
 echo "Will install required system packages with apt-get"
 sudo apt-get update
@@ -52,7 +53,7 @@ ln -s ../../src
 cd ..
 touch src/submodules/AirCap/packages/optional/basler_image_capture/CATKIN_IGNORE
 touch src/submodules/AirCap/packages/optional/ptgrey_image_capture/CATKIN_IGNORE
-catkin_make || { echo "Failure"; exit;}
+catkin_make -j2 || { echo "Failure"; exit;}
 source devel/setup.bash
 cd ..
 
