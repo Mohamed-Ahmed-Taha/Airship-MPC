@@ -9,7 +9,7 @@ echo "If in doubt, read this file and execute the commands one by one with chang
 
 echo "Will install required system packages with apt-get"
 sudo apt-get update
-sudo apt-get install git vim lsb-release build-essential curl llvm-dev libclang-dev clang python-is-python3 python3-pip libgoogle-glog-dev python2 screen psmisc bc || { echo "Failure"; exit;}
+sudo apt-get install -y git vim lsb-release build-essential curl llvm-dev libclang-dev clang python-is-python3 python3-pip libgoogle-glog-dev python2 screen psmisc bc || { echo "Failure"; exit;}
 
 
 echo "Checking for ROS Noetic"
