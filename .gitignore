@@ -1,0 +1,4 @@
+catkin_ws/build/
+catkin_ws/devel/
+src/blimp_nmpc_wrapper_node/nodes/__pycache__/
+src/codegen/
