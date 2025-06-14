@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>nmpc_blimp_formation_planner</name>
+  <version>0.1.1</version>
+  <description>nmpc optimizing for blimp formation</description>
+  <maintainer email="maintainer-email@todo.todo">chung</maintainer>
+  <license>GPLv3</license>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+
+  <depend>nmpc_blimp_formation_planner_msgs</depend>
+  
+  <export></export>
+</package>

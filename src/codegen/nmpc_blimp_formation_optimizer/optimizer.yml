@@ -1,0 +1,22 @@
+_comment: auto-generated file; do not modify
+build:
+  build_dir: codegen
+  build_mode: release
+  open_version: null
+  opengen_version: 0.9.4
+  target_system: null
+meta:
+  authors:
+  - John Smith
+  licence: GPLv3
+  optimizer_name: nmpc_blimp_formation_optimizer
+  version: 0.1.1
+solver:
+  constraints_tolerance: 0.01
+  lbfgs_memory: 10
+  max_duration_micros: 250000
+  max_inner_iterations: 500
+  max_outer_iterations: 20
+  penalty_weight_update_factor: 10.0
+  tolerance: 0.001
+tcp: null

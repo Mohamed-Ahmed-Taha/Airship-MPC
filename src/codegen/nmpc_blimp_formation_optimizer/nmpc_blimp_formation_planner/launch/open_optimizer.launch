@@ -1,0 +1,10 @@
+<launch>
+  <node name="nmpc_blimp_formation_planner"
+        pkg="nmpc_blimp_formation_planner"
+        type="nmpc_blimp_planner"
+        respawn="true"
+        clear_params="true"
+        output="screen">
+    <rosparam file="$(find nmpc_blimp_formation_planner)/config/open_params.yaml" />
+  </node>
+</launch>

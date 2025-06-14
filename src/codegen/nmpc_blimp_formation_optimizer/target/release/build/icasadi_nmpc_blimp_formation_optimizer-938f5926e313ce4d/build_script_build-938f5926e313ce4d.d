@@ -1,0 +1,5 @@
+/home/catkin_ws/Airship-MPC/src/codegen/nmpc_blimp_formation_optimizer/target/release/build/icasadi_nmpc_blimp_formation_optimizer-938f5926e313ce4d/build_script_build-938f5926e313ce4d: icasadi_nmpc_blimp_formation_optimizer/build.rs
+
+/home/catkin_ws/Airship-MPC/src/codegen/nmpc_blimp_formation_optimizer/target/release/build/icasadi_nmpc_blimp_formation_optimizer-938f5926e313ce4d/build_script_build-938f5926e313ce4d.d: icasadi_nmpc_blimp_formation_optimizer/build.rs
+
+icasadi_nmpc_blimp_formation_optimizer/build.rs:
