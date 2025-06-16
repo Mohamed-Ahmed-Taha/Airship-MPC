@@ -1,3 +1,2 @@
-catkin_ws/build/
-catkin_ws/devel/
+catkin_ws/
 src/blimp_nmpc_wrapper_node/nodes/__pycache__/
