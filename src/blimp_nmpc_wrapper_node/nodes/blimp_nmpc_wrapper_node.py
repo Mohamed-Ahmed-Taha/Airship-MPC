@@ -8,7 +8,7 @@ from sensor_msgs.msg import *
 from std_msgs.msg import *
 from visualization_msgs.msg import *
 from uav_msgs.msg import *
-from nmpc_blimp_formation_planner.msg import *
+from nmpc_blimp_formation_planner_msgs.msg import *
 import sys
 import copy
 import os
