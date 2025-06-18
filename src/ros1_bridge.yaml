@@ -1,0 +1,84 @@
+topics:
+  - topic: /machine_1/target_tracker/pose
+    type: geometry_msgs/msg/PoseWithCovarianceStamped
+    queue_size: 3
+  - topic: /machine_1/target_tracker/twist
+    type: geometry_msgs/msg/TwistWithCovarianceStamped
+    queue_size: 3
+  - topic: /machine_/throttledUAVPose
+    type: uav_msgs/msg/UAVPose
+    queue_size: 3
+  - topic: /machine_/nmpc_blimp_planner/parameters
+    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
+    queue_size: 3
+  - topic: /machine_/nmpc_blimp_planner/result
+    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
+    queue_size: 3
+  - topic: /machine_/command
+    type: uav_msgs/msg/UAVPose
+    queue_size: 3
+  - topic: /machine_/commandvis
+    type: visualization_msgs/msg/Marker
+    queue_size: 3
+  - topic: /machine_/obstaclevis
+    type: visualization_msgs/msg/MarkerArray
+    queue_size: 3
+  - topic: /machine_/winddebug
+    type: geometry_msgs/msg/PointStamped
+    queue_size: 3
+
+  - topic: /machine_2/target_tracker/pose
+    type: geometry_msgs/msg/PoseWithCovarianceStamped
+    queue_size: 3
+  - topic: /machine_2/target_tracker/twist
+    type: geometry_msgs/msg/TwistWithCovarianceStamped
+    queue_size: 3
+  - topic: /machine_2/throttledUAVPose
+    type: uav_msgs/msg/UAVPose
+    queue_size: 3
+  - topic: /machine_2/nmpc_blimp_planner/parameters
+    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
+    queue_size: 3
+  - topic: /machine_2/nmpc_blimp_planner/result
+    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
+    queue_size: 3
+  - topic: /machine_2/command
+    type: uav_msgs/msg/UAVPose
+    queue_size: 3
+  - topic: /machine_2/commandvis
+    type: visualization_msgs/msg/Marker
+    queue_size: 3
+  - topic: /machine_2/obstaclevis
+    type: visualization_msgs/msg/MarkerArray
+    queue_size: 3
+  - topic: /machine_2/winddebug
+    type: geometry_msgs/msg/PointStamped
+    queue_size: 3
+
+  - topic: /machine_3/target_tracker/pose
+    type: geometry_msgs/msg/PoseWithCovarianceStamped
+    queue_size: 3
+  - topic: /machine_3/target_tracker/twist
+    type: geometry_msgs/msg/TwistWithCovarianceStamped
+    queue_size: 3
+  - topic: /machine_3/throttledUAVPose
+    type: uav_msgs/msg/UAVPose
+    queue_size: 3
+  - topic: /machine_3/nmpc_blimp_planner/parameters
+    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
+    queue_size: 3
+  - topic: /machine_3/nmpc_blimp_planner/result
+    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
+    queue_size: 3
+  - topic: /machine_3/command
+    type: uav_msgs/msg/UAVPose
+    queue_size: 3
+  - topic: /machine_3/commandvis
+    type: visualization_msgs/msg/Marker
+    queue_size: 3
+  - topic: /machine_3/obstaclevis
+    type: visualization_msgs/msg/MarkerArray
+    queue_size: 3
+  - topic: /machine_3/winddebug
+    type: geometry_msgs/msg/PointStamped
+    queue_size: 3
