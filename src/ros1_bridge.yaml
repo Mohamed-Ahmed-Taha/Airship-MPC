@@ -5,25 +5,25 @@ topics:
   - topic: /machine_1/target_tracker/twist
     type: geometry_msgs/msg/TwistWithCovarianceStamped
     queue_size: 3
-  - topic: /machine_/throttledUAVPose
+  - topic: /machine_1/throttledUAVPose
     type: uav_msgs/msg/UAVPose
     queue_size: 3
-  - topic: /machine_/nmpc_blimp_planner/parameters
+  - topic: /machine_1/nmpc_blimp_planner/parameters
     type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
     queue_size: 3
-  - topic: /machine_/nmpc_blimp_planner/result
+  - topic: /machine_1/nmpc_blimp_planner/result
     type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
     queue_size: 3
-  - topic: /machine_/command
+  - topic: /machine_1/command
     type: uav_msgs/msg/UAVPose
     queue_size: 3
-  - topic: /machine_/commandvis
+  - topic: /machine_1/commandvis
     type: visualization_msgs/msg/Marker
     queue_size: 3
-  - topic: /machine_/obstaclevis
+  - topic: /machine_1/obstaclevis
     type: visualization_msgs/msg/MarkerArray
     queue_size: 3
-  - topic: /machine_/winddebug
+  - topic: /machine_1/winddebug
     type: geometry_msgs/msg/PointStamped
     queue_size: 3
 
