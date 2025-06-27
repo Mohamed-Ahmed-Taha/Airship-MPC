@@ -8,12 +8,12 @@ topics:
   - topic: /machine_1/throttledUAVPose
     type: uav_msgs/msg/UAVPose
     queue_size: 3
-  - topic: /machine_1/nmpc_blimp_planner/parameters
-    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
-    queue_size: 3
-  - topic: /machine_1/nmpc_blimp_planner/result
-    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
-    queue_size: 3
+  # - topic: /machine_1/nmpc_blimp_planner/parameters
+  #   type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
+  #   queue_size: 3
+  # - topic: /machine_1/nmpc_blimp_planner/result
+  #   type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
+  #   queue_size: 3
   - topic: /machine_1/command
     type: uav_msgs/msg/UAVPose
     queue_size: 3
@@ -36,12 +36,12 @@ topics:
   - topic: /machine_2/throttledUAVPose
     type: uav_msgs/msg/UAVPose
     queue_size: 3
-  - topic: /machine_2/nmpc_blimp_planner/parameters
-    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
-    queue_size: 3
-  - topic: /machine_2/nmpc_blimp_planner/result
-    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
-    queue_size: 3
+  # - topic: /machine_2/nmpc_blimp_planner/parameters
+  #   type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
+  #   queue_size: 3
+  # - topic: /machine_2/nmpc_blimp_planner/result
+  #   type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
+  #   queue_size: 3
   - topic: /machine_2/command
     type: uav_msgs/msg/UAVPose
     queue_size: 3
@@ -64,12 +64,12 @@ topics:
   - topic: /machine_3/throttledUAVPose
     type: uav_msgs/msg/UAVPose
     queue_size: 3
-  - topic: /machine_3/nmpc_blimp_planner/parameters
-    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
-    queue_size: 3
-  - topic: /machine_3/nmpc_blimp_planner/result
-    type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
-    queue_size: 3
+  # - topic: /machine_3/nmpc_blimp_planner/parameters
+  #   type: nmpc_blimp_formation_planner_msgs/msg/OptimizationParameters
+  #   queue_size: 3
+  # - topic: /machine_3/nmpc_blimp_planner/result
+  #   type: nmpc_blimp_formation_planner_msgs/msg/OptimizationResult
+  #   queue_size: 3
   - topic: /machine_3/command
     type: uav_msgs/msg/UAVPose
     queue_size: 3
