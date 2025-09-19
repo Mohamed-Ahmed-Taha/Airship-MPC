@@ -54,12 +54,12 @@ screen -d -m -S GAZEBO bash -i -c "source ../../catkin_ws/devel/setup.bash; rosl
 # rosrun uavPidParamServer pid_serverNode &
 sleep 10
 
-echo "Launching rviz..."
-screen -d -m -S RVIZ bash -i -c "source ../../catkin_ws/devel/setup.bash; rviz -d ../../submodules/AirCap/packages/3rdparty/airship_simulation/blimp_description/rviz/3_blimp_nmpc.rviz"
-sleep 5
+# echo "Launching rviz..."
+# screen -d -m -S RVIZ bash -i -c "source ../../catkin_ws/devel/setup.bash; rviz -d ../../submodules/AirCap/packages/3rdparty/airship_simulation/blimp_description/rviz/3_blimp_nmpc.rviz"
+# sleep 5
 
-echo "Starting Deep Neural Network Server..."
-screen -d -m -S SSDSERVER bash -i -c "./ssd_server.sh 0"
+# echo "Starting Deep Neural Network Server..."
+# screen -d -m -S SSDSERVER bash -i -c "./ssd_server.sh 0"
 sleep 5
 
 #roslaunch random_moving_target spawn_move_target_withID.launch joyDevName:=0 directUseForFormation:=true --screen &
@@ -82,9 +82,16 @@ for i in $(seq 0 $(($BLIMPS-1))); do
     echo "Starting virtual flight controller $i..."
     screen -d -m -S SIMPOSIX bash -i -c "./fc_server.sh $i"
 
-    echo "Starting Blimp $id"
-    screen -d -m -S AIRCAP$id bash -i -c "source ../../catkin_ws/devel/setup.bash; roslaunch aircap simulation_blimp.launch robotID:=$id numRobots:=$ROBOS comSuccessRate:=$COMSUCCESSRATE Z:=8 X:=${Xs[$id]}  Y:=${Ys[$id]} --screen"
-    sleep 5
+	echo "Starting firefly $id"
+	screen -d -m -S AIRCAP$id bash -i -c "source ../../catkin_ws/devel/setup.bash; roslaunch rotors_gazebo mav_with_joy_and_ID.launch roboID:=$id Z:=8 X:=${Xs[$i]} Y:=${Ys[$i]} --screen"
+	sleep 5
+
+	echo "Starting AIRCAP for robot $id"
+	screen -d -m -S AIRCAP$id bash -i -c "roslaunch aircap simulation.launch robotID:=$id numRobots:=$ROBOS comSuccessRate:=$COMSUCCESSRATE --screen"
+
+    # echo "Starting Blimp $id"
+    # screen -d -m -S AIRCAP$id bash -i -c "source ../../catkin_ws/devel/setup.bash; roslaunch aircap simulation_blimp.launch robotID:=$id numRobots:=$ROBOS comSuccessRate:=$COMSUCCESSRATE Z:=8 X:=${Xs[$id]}  Y:=${Ys[$id]} --screen"
+    # sleep 5
 done
 
 
@@ -136,7 +143,7 @@ done
 
 
 echo "Waiting 20 seconds for everyone to come up"
-timeout 400 ./rossleep.py 20
+timeout 400 ./rossleep.py 3	0
 result=$?
 if [ $result = 124 ]; then
 	echo "Something went wrong, timeout!"
