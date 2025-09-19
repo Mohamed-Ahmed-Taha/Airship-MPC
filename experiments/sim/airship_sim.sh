@@ -82,15 +82,15 @@ for i in $(seq 0 $(($BLIMPS-1))); do
     echo "Starting virtual flight controller $i..."
     screen -d -m -S SIMPOSIX bash -i -c "./fc_server.sh $i"
 
-	echo "Starting firefly $id"
-	screen -d -m -S AIRCAP$id bash -i -c "source ../../catkin_ws/devel/setup.bash; roslaunch rotors_gazebo mav_with_joy_and_ID.launch roboID:=$id Z:=8 X:=${Xs[$i]} Y:=${Ys[$i]} --screen"
-	sleep 5
+	# echo "Starting firefly $id"
+	# screen -d -m -S AIRCAP$id bash -i -c "source ../../catkin_ws/devel/setup.bash; roslaunch rotors_gazebo mav_with_joy_and_ID.launch roboID:=$id Z:=8 X:=${Xs[$i]} Y:=${Ys[$i]} --screen"
+	# sleep 5
 
-	echo "Starting AIRCAP for robot $id"
-	screen -d -m -S AIRCAP$id bash -i -c "roslaunch aircap simulation.launch robotID:=$id numRobots:=$ROBOS comSuccessRate:=$COMSUCCESSRATE --screen"
+	# echo "Starting AIRCAP for robot $id"
+	# screen -d -m -S AIRCAP$id bash -i -c "roslaunch aircap simulation.launch robotID:=$id numRobots:=$ROBOS comSuccessRate:=$COMSUCCESSRATE --screen"
 
     echo "Starting Blimp $id"
-    screen -d -m -S AIRCAP$id bash -i -c "source ../../catkin_ws/devel/setup.bash; roslaunch aircap simulation.launch robotID:=$id numRobots:=$ROBOS comSuccessRate:=$COMSUCCESSRATE Z:=8 X:=${Xs[$id]}  Y:=${Ys[$id]} --screen"
+    screen -d -m -S AIRCAP$id bash -i -c "source ../../catkin_ws/devel/setup.bash; roslaunch aircap simulation_blimp.launch robotID:=$id numRobots:=$ROBOS comSuccessRate:=$COMSUCCESSRATE Z:=8 X:=${Xs[$id]}  Y:=${Ys[$id]} --screen"
     sleep 5
 done
 
